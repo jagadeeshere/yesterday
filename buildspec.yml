@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - echo "Installing dependencies..."
+      - pip install --upgrade pip
+      - pip install -r requirements.txt
+
+  build:
+    commands:
+      - echo "Zipping application source..."
+      - zip -r app.zip app.py requirements.txt
+
+artifacts:
+  files:
+    - app.py
+    - appspec.yml
+    - requirements.txt
+    - buildspec-test.yml
+    - test/**
+    - scripts/**
+    - app.zip
+  discard-paths: no
