@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f2f4f7;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #ff9900;
+  margin-bottom: 30px;
+}
+
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stage {
+  padding: 25px;
+  border-radius: 10px;
+  background: #d9d9d9;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.stage.pending {
+  background-color: #d9d9d9;
+  border-color: #aaa;
+}
+
+.stage.in-progress {
+  background-color: #f0ad4e;
+  border-color: #d58512;
+  color: white;
+}
+
+.stage.succeeded {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  color: white;
+}
+
+.stage.failed {
+  background-color: #d9534f;
+  border-color: #c9302c;
+  color: white;
+}
+
+.note {
+  margin-top: 20px;
+  color: #666;
+  font-size: 0.95em;
+}

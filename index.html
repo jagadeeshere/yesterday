@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AWS CodePipeline Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>AWS CodePipeline Dashboard</h1>
+    <div class="pipeline">
+      <div class="stage" onclick="updateStatus(this)">Source</div>
+      <div class="stage" onclick="updateStatus(this)">Build</div>
+      <div class="stage" onclick="updateStatus(this)">Test</div>
+      <div class="stage" onclick="updateStatus(this)">Deploy</div>
+    </div>
+    <p class="note">Click on a stage to cycle through statuses.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
